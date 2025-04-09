@@ -6,14 +6,12 @@ class CustomAppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.indigo.shade700,
+      backgroundColor: Colors.indigo[400],
       child: ListView(
-        padding: EdgeInsets.zero,
         children: [
-          // Header with user info
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.indigo.shade800,
+              color: Colors.indigo[400],
             ),
             accountName: Text("Md. Mezbaul Islam Zion"),
             accountEmail: Text("zion.cse@diu.edu.bd"),
@@ -23,7 +21,7 @@ class CustomAppDrawer extends StatelessWidget {
             ),
           ),
 
-          // Menu Items using ListTile
+          
           _buildTile(icon: Icons.dashboard, label: "Dashboard"),
           _buildTile(icon: Icons.person, label: "Profile"),
           _buildTile(icon: Icons.notifications, label: "DIU Notice"),
@@ -47,7 +45,7 @@ class CustomAppDrawer extends StatelessWidget {
       leading: Icon(icon, color: Colors.white),
       title: Text(label, style: TextStyle(color: Colors.white)),
       onTap: () {
-        // Add navigation logic here
+        
       },
     );
   }

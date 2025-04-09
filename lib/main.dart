@@ -34,7 +34,6 @@ class DashboardPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Navigation tabs
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -47,11 +46,9 @@ class DashboardPage extends StatelessWidget {
               ],
             ),
           ),
-
-          // Profile & card info
           Container(
             color: Colors.indigo[400],
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            padding: EdgeInsets.all(8),
             child: Column(
               children: [
                 Row(
@@ -76,17 +73,17 @@ class DashboardPage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 20),
-
-                // Balance and Scan
+                SizedBox(
+                  height: 20,
+                ),
                 Row(
                   children: [
                     Expanded(
                       child: Container(
                         height: 80,
+                        padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade600,
-                          // borderRadius: BorderRadius.circular(12),
+                          color: Colors.indigo[400],
                         ),
                         child: Center(
                           child: Column(
@@ -108,7 +105,6 @@ class DashboardPage extends StatelessWidget {
                       width: 80,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
                         child: Column(
@@ -128,12 +124,9 @@ class DashboardPage extends StatelessWidget {
               ],
             ),
           ),
-
-          // Recent Activities
           Expanded(
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              color: Colors.grey.shade100,
+              color: Colors.grey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
