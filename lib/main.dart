@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'customappbar.dart';
 
 void main() {
   runApp(My1CardApp());
@@ -21,9 +22,7 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.indigo.shade700,
-      drawer: Drawer(
-        child: Text('hello'),
-      ),
+      drawer: CustomAppDrawer(),
       appBar: AppBar(
         title: Text("1Card"),
         backgroundColor: Colors.indigo[400],
